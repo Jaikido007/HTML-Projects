@@ -1,16 +1,64 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", "sans-serif";
-  display: flex; /* by itself would display everything horizontal */
-  flex-direction: column; /* sets flex to column and vertical */
-  align-items: center; /* centre with this in a flex box */
-  justify-content: center; /* places it centre of screen but only with height */
-  height: 100vh; /* view port height - full screen size */
-  overflow: hidden; /* scroll bars hidden by defualt */
+  font-family: "Muli", "sans-serif";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
   margin: 0;
+}
+
+.container {
+  display: flex; /* puts them in horizontal */
+  width: 90vw;
+}
+
+.panel {
+  background-size: cover; /* preserves rounded corners on large screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vw;
+  border-radius: 50px; /* rounds the tops and bottoms */
+  color: white; /* of text */
+  cursor: pointer;
+  flex: 0.5; /* initial value until active class then set higher to approx 5*/
+  margin: 10px; /* gaps between images*/
+  position: relative; /* h3 is relative */
+  transition: 0.7s ease-in; /* transitional wipe including seconds and effect*/
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0; /* transparent until active */
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.5s; /* transitional wipe including seconds, effect and delay*/
+}
+
+/* for smaller screens */
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
 }
