@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+/* custom properties (allows for easy color changes in future */
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f7fb;
+  font-family: "Muli", "sans-serif";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+}
+
+.progress-container::before {
+  content: ""; /* Must set content if using before/after - set to empty string. */
+  background-color: var(--line-border-empty);
+  position: absolute; /*  */
+  top: 50%; /* vertical middle */
+  left: 0;
+  transform: translateY(
+    -50%
+  ); /* set the line to be middle not from top of line (pedantic) */
+  height: 4px;
+  width: 100%; /* The empty line behind progress line */
+  z-index: -1; /* Will place the line behind the circles */
+}
+
+.progress {
+  background-color: var(--line-border-fill);
+  position: absolute; /*  */
+  top: 50%; /* vertical middle */
+  left: 0;
+  transform: translateY(
+    -50%
+  ); /* set the line to be middle not from top of line (pedantic) */
+  height: 4px;
+  width: 0%; /* 0% - set to 50% to see it while I work */
+  z-index: -1; /* Will place the line behind the circles */
+  transition: 0.4s ease; /* duration and effect */
+}
+
+.circle {
+  background-color: white;
+  color: #999;
+  border-radius: 50%; /* rounded */
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: white; /* font */
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px; /* top bottom / left right */
+  margin: 5px;
+  font-size: 14px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
