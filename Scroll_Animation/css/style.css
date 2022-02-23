@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efedd6;
+  font-family: "Roboto", "sans-serif";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 10px;
+}
+
+/* BOX STYLE */
+.box {
+  background-color: steelblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  margin: 10px; /* seperates boxes */
+  border-radius: 10px;
+  /* BOX-SHADOW = ? - offset - blur - color(red, green, blue, alpha-value */
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  /* TRANSLATEX = move along the x axis - starting off screen to the right */
+  transform: translateX(200%);
+  transition: transform 0.4s ease;
+}
+
+/* seperates boxes - nth is a psudo selector */
+.box:nth-of-type(even) {
+  transform: translateX(-200%);
+}
+
+.box.show {
+  transform: translateX(0); /* returns box to reg position */
+}
+
+.box h2 {
+  font-size: 45px;
+}
