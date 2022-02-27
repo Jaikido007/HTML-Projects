@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Poppins:ital,wght@1,200&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,7 +6,8 @@
 
 body {
   background-color: #d3201a;
-  font-family: "Roboto", "sans-serif";
+  font-family: "BhuTuka Expanded One", cursive;
+  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
