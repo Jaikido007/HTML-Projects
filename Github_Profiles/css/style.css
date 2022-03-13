@@ -81,12 +81,12 @@ body {
 }
 
 .user-info ul li {
-  color: yellow;
   display: flex;
   align-items: center;
 }
 
 .user-info ul li strong {
+  color: yellow;
   font-size: 0.9rem;
   margin-left: 0.5rem;
 }
