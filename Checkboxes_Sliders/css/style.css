@@ -5,7 +5,6 @@
 }
 
 body {
-  background-color: rgb(249, 236, 249);
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
