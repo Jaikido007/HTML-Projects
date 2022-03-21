@@ -17,8 +17,8 @@ body {
 }
 
 .magic {
-  background-color: #f9ca24;
-  color: #fff;
+  background-color: #f5515188;
+  color: black;
   font-family: "Poppins", sans-serif;
   border: 0;
   border-radius: 3px;
@@ -28,7 +28,7 @@ body {
   position: fixed;
   top: 20px;
   letter-spacing: 1px;
-  box-shadow: 0 3px rgba(249, 202, 36, 0.5);
+  box-shadow: 0 3px rgba(249, 36, 36, 0.719);
   z-index: 100;
 }
 
@@ -61,7 +61,7 @@ body {
 }
 
 .box {
-  background-image: url("https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif");
+  background-image: url("https://media.giphy.com/media/fdFR2DKdynZ4IN6WHu/giphy.gif");
   background-repeat: no-repeat;
   background-size: 500px 500px;
   position: relative;
@@ -72,7 +72,7 @@ body {
 
 .box::after {
   content: "";
-  background-color: #f6e58d;
+  background-color: #f68d8d;
   position: absolute;
   top: 8px;
   right: -15px;
@@ -83,7 +83,7 @@ body {
 
 .box::before {
   content: "";
-  background-color: #f9ca24;
+  background-color: #f92424;
   position: absolute;
   bottom: -15px;
   left: 8px;
