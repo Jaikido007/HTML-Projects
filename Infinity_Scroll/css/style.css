@@ -39,3 +39,26 @@ h1 {
     -50%
   ); /* Centralises from centre of the image instead of top left corner */
 }
+
+/* Image Container */
+
+.image-container {
+  margin: 10px 30%; /* 10px top and bottom / 30% left and right = 60% margin 40% image */
+}
+
+/* targeting the child class (img) of the image-container */
+.image-container img {
+  width: 100%;
+  margin-top: 5px; /* adding a gap between images */
+}
+
+/* Media Query for Large Smartphone ---- std is 600px - anything less will apply this styling*/
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .image-container {
+    margin: 10px;
+  }
+}
