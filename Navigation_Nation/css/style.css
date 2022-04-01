@@ -23,12 +23,12 @@ body {
 
 /* Overlay */
 .overlay {
-  position: fixed;
-  z-index: 9;
+  position: fixed; /* Always in the same spot regardless of scrolling */
+  z-index: 9; /* Above everything else on page - default is 1 */
   top: 0;
-  left: 0;
+  left: 0; /* Top, Left 0 = top left corner */
   width: 100vw;
-  height: 100vh;
+  height: 100vh; /* As wide/ tall as entire screen */
   background-color: rgba(0, 0, 0, 0.7);
   transform: translateX(-100vw);
 }
@@ -53,14 +53,14 @@ nav ul {
 
 nav ul {
   display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  list-style: none;
+  flex-direction: column; /* Top to bottom not left to right */
+  justify-content: stretch; /* Stretch to width of page */
+  list-style: none; /* Removes list bullet points */
 }
 
 nav ul li {
-  height: 20%;
-  overflow: hidden;
+  height: 20%; /* A fifth of the vh size */
+  overflow: hidden; /* Doesn't stretch the page horizontally */
 }
 
 nav li a {
@@ -75,10 +75,11 @@ nav li a {
 }
 
 nav li a:hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Nav anchor 20% bigger */
 }
 
 nav li a::before {
+  /* Allows content before anchor element*/
   content: "";
   width: 25vw;
   height: 3px;
