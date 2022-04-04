@@ -31,7 +31,7 @@ body {
 }
 
 .header {
-  background: var(--startrek-green);
+  background: var(--startrek-blue);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   height: 100px;
@@ -41,7 +41,7 @@ body {
 }
 
 h1 {
-  color: var(--startrek-black);
+  color: white;
   font-size: 30px;
 }
 
