@@ -63,7 +63,7 @@ h3 {
 }
 
 .progress {
-  background: #242323;
+  background: #5e9ff5;
   border-radius: 5px;
   height: 100%;
   width: 0%;
@@ -95,6 +95,7 @@ h3 {
 
 .fas:hover {
   filter: brightness(80%);
+  color: #5e9ff5;
 }
 
 .main-button {
